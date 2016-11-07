@@ -1,0 +1,24 @@
+inherit qt5 cmake
+
+NAME="libfm-qt"
+VERSION=0.11.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="LXQt file manager library"
+DESCRIPTION="LXQt is the Qt port and the upcoming version of LXDE. It is the
+product of the merge between the LXDE-Qt and the Razor-qt projects: A
+lightweight, modular, blazing-fast and user-friendly desktop environment."
+HOMEPAGE="http://lxqt.org/"
+SRC_URI="http://downloads.lxqt.org/libfm-qt/${VERSION}/${NAME}-${VERSION}.tar.xz"
+PATCH_URI="
+	0.11.1-cmake-install.patch
+	0.11.1-dllexport.patch
+"
+
+PKG_NAMES="libfm-qt3 libfm-qt-devel"
+libfm_qt3_OBSOLETES="libfm-qt5-common"
+libfm_qt3_CONTENTS="usr/bin/cygfm-qt-3.dll usr/share/doc/"
+libfm_qt_devel_OBSOLETES="libfm-qt5-devel"
+libfm_qt_devel_CONTENTS="usr/include/ usr/lib/ usr/share/cmake/fm-qt/"
+
+CYGCMAKE_ARGS="-DPULL_TRANSLATIONS=OFF"

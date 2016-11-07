@@ -1,0 +1,22 @@
+--- origsrc/libfm-qt-0.11.1/src/bookmarks.h	2016-09-23 17:49:17.000000000 -0500
++++ src/libfm-qt-0.11.1/src/bookmarks.h	2016-11-06 22:23:17.027609900 -0600
+@@ -29,7 +29,7 @@
+ namespace Fm {
+ 
+ 
+-class LIBFM_QT_API Bookmarks {
++class Bookmarks {
+ public:
+ 
+ 
+--- origsrc/libfm-qt-0.11.1/src/folder.h	2016-09-23 17:49:17.000000000 -0500
++++ src/libfm-qt-0.11.1/src/folder.h	2016-11-06 22:20:15.321080000 -0600
+@@ -29,7 +29,7 @@
+ namespace Fm {
+ 
+ 
+-class LIBFM_QT_API Folder {
++class Folder {
+ public:
+ 
+ 
